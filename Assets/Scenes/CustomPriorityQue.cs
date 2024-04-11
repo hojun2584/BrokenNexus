@@ -20,6 +20,7 @@ public class MyHeap<T>
 
     public void InsertValue(T value)
     {
+        
         if (capacity <= size)
         {
             size *= multipleArray;
@@ -102,7 +103,7 @@ public class CustomPriorityQue<T>
     }
     public int Size
     {
-        get => heap.size;
+        get => heap.size - 1;
     }
 
     public CustomPriorityQue(Func<T, T, bool> Compare)
@@ -124,13 +125,13 @@ public class CustomPriorityQue<T>
     }
     public void Clear()
     {
-        heap.size = 0;
-        heap.values = new T[heap.size];
+        heap.size = 1;
+        heap.values = new T[heap.capacity];
     }
 
     public bool Empty()
     {
-        return heap.size == 0;
+        return heap.size == 1;
     }
 
 }

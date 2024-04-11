@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class CharacterMove : MonoBehaviour
+public abstract class CharacterMove : IMoveStrategy
 {
+    protected NavMeshAgent agent;
+    protected  { get; set; }
 
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Move()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        throw new System.NotImplementedException();
     }
 }
